@@ -66,11 +66,11 @@ set wildmode=list:longest,full
 " INDENTATION----------------------------------{{{
 set autoindent smartindent
 set copyindent
-set expandtab
+set noexpandtab
 " expanded Tab key results in # spaces
 set softtabstop=5
 " Tab is # spaces
-set tabstop=5
+set tabstop=4
 " The # of spaces for indenting.
 set shiftwidth=4
 " At start of line, <Tab> inserts shift width spaces, <Bs> deletes shift width spaces.

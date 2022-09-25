@@ -139,21 +139,21 @@ function extract {
         # NAME=${1%.*}
         # mkdir $NAME && cd $NAME
         case $1 in
-          *.tar.bz2)   tar xvjf ../$1    ;;
-          *.tar.gz)    tar xvzf ../$1    ;;
-          *.tar.xz)    tar xvJf ../$1    ;;
-          *.lzma)      unlzma ../$1      ;;
-          *.bz2)       bunzip2 ../$1     ;;
-          *.rar)       unrar x -ad ../$1 ;;
-          *.gz)        gunzip ../$1      ;;
-          *.tar)       tar xvf ../$1     ;;
-          *.tbz2)      tar xvjf ../$1    ;;
-          *.tgz)       tar xvzf ../$1    ;;
-          *.zip)       unzip ../$1       ;;
-          *.Z)         uncompress ../$1  ;;
-          *.7z)        7z x ../$1        ;;
-          *.xz)        unxz ../$1        ;;
-          *.exe)       cabextract ../$1  ;;
+          *.tar.bz2)   tar xvjf ./$1    ;;
+          *.tar.gz)    tar xvzf ./$1    ;;
+          *.tar.xz)    tar xvJf ./$1    ;;
+          *.lzma)      unlzma ./$1      ;;
+          *.bz2)       bunzip2 ./$1     ;;
+          *.rar)       unrar x -ad ./$1 ;;
+          *.gz)        gunzip ./$1      ;;
+          *.tar)       tar xvf ./$1     ;;
+          *.tbz2)      tar xvjf ./$1    ;;
+          *.tgz)       tar xvzf ./$1    ;;
+          *.zip)       unzip ./$1       ;;
+          *.Z)         uncompress ./$1  ;;
+          *.7z)        7z x ./$1        ;;
+          *.xz)        unxz ./$1        ;;
+          *.exe)       cabextract ./$1  ;;
           *)           echo "extract: '$1' - unknown archive method" ;;
         esac
     else
@@ -210,7 +210,6 @@ alias myip="curl http://ipecho.net/plain; echo"
 alias logs="find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
 alias folders='find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn'
 alias grep='grep --color=auto'
-alias lebiniou='flatpak run net.biniou.LeBiniou'
 
 ### Bind keys
 #############
